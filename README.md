@@ -23,7 +23,6 @@ https://github.com/facebookresearch/detr
 6) The thought behind tailgating is to understand how long a certain vehicle was in the ROI or behind another vehicle when the gate was opened
 7) The console statements shows the final output
 ````
-It might be a little overwhelming at first to understand but the data analysis will generate the results for tailgating
 
 Some important parameters and their thresholds
 - ROI_OVERLAP_THRESHOLD - Overlap with ROI, default 0.8
