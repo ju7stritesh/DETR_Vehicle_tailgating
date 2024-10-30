@@ -2,7 +2,7 @@
 
 https://github.com/facebookresearch/detr
 
-### We use DETR to detect vehicles and Deepsort to ReID the vehicle (One can use a better detection model like YOLO, CNNs or transformer based models).
+### We use DETR to detect vehicles and Deepsort to ReID the vehicle (One can use different detection model like YOLO, CNNs or transformer based models).
 
 ### The results produced from the same can be viewed here
 [tailgating.avi](VideoResults%2Ftailgating.avi)
