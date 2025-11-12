@@ -64,7 +64,7 @@ Configured within the **`Tailgating`** class (in `inference_tailgating.py`) and 
 * **`detr_deep_sort_vehicle.py`** — DETR + Deep SORT integration and ROI drawing support. ([GitHub][1])
 * **`README.md`** — original short guide in the repo. ([GitHub][1])
   
-#### The results produced from the same can be viewed here
+#### The result produced from the same can be viewed here
 [tailgating.avi](VideoResults%2Ftailgating.avi)
 
 
