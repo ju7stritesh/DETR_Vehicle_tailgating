@@ -7,7 +7,8 @@ Here’s a README in GitHub-friendly Markdown, based **only** on what’s in you
 This repository provides a way to **detect and track vehicles** using a **transformer-based object detector (DETR)** and a **tracking algorithm (Deep SORT)** to identify **tailgating** behavior. ([GitHub][1])
 
 > DETR reference: [https://github.com/facebookresearch/detr](https://github.com/facebookresearch/detr) ([GitHub][1])
-> Output: [https://github.com/ju7stritesh/DETR_Vehicle_tailgating/blob/main/VideoResults/tailgating.avi] ([video][1])
+
+> Output: [https://github.com/ju7stritesh/DETR_Vehicle_tailgating/blob/main/VideoResults/] ([video][1])
 ---
 
 ## Repository Structure
