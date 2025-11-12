@@ -7,22 +7,21 @@ Here’s a README in GitHub-friendly Markdown, based **only** on what’s in you
 This repository provides a way to **detect and track vehicles** using a **transformer-based object detector (DETR)** and a **tracking algorithm (Deep SORT)** to identify **tailgating** behavior. ([GitHub][1])
 
 > DETR reference: [https://github.com/facebookresearch/detr](https://github.com/facebookresearch/detr) ([GitHub][1])
-
+> Output: [https://github.com/ju7stritesh/DETR_Vehicle_tailgating/blob/main/VideoResults/tailgating.avi] ([video][1])
 ---
 
 ## Repository Structure
 
-* `detr_deep_sort_vehicle.py` — Core logic for detecting and tracking vehicles; includes an option to **draw Region of Interest (ROI)**. ([GitHub][1])
-* `inference_tailgating.py` — **Inference entry point**; accepts a video path in the `event()` function and applies tailgating logic. ([GitHub][1])
-* `draw_roi.py`, `generate_detections.py`, `features_from_boxes.py` — Utilities used by the pipeline. ([GitHub][1])
+* `detr_deep_sort_vehicle.py` — Core logic for detecting and tracking vehicles; includes an option to **draw Region of Interest (ROI)**. 
+* `inference_tailgating.py` — **Inference entry point**; accepts a video path in the `event()` function and applies tailgating logic. 
+* `draw_roi.py`, `generate_detections.py`, `features_from_boxes.py` — Utilities used by the pipeline. 
 * `deep_sort/` — Deep SORT related code. ([GitHub][1])
-* `configs/`, `model_data/` — Configuration and model-related assets. ([GitHub][1])
-* `Video/`, `NewVideos/` — Sample/input videos (folder names). ([GitHub][1])
-* `VideoResults/` — Output videos/results (folder name). ([GitHub][1])
-* `requirements.txt` — Python dependencies list. ([GitHub][1])
+* `configs/`, `model_data/` — Configuration and model-related assets. 
+* `Video/`, `NewVideos/` — Sample/input videos (folder names). 
+* `VideoResults/` — Output videos/results (folder name). 
+* `requirements.txt` — Python dependencies list. 
 
-A sample output video is linked as **`[tailgating.avi](VideoResults%2Ftailgating.avi)
-`**.
+A sample output video is linked as **`[tailgating.avi]`**. ([video][1])
 
 ---
 
