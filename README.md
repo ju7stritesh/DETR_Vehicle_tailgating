@@ -1,7 +1,3 @@
-Here’s a README in GitHub-friendly Markdown, based **only** on what’s in your repo.
-
----
-
 # Vehicle Tailgating solution using Deep Sort and DETR
 
 This repository provides a way to **detect and track vehicles** using a **transformer-based object detector (DETR)** and a **tracking algorithm (Deep SORT)** to identify **tailgating** behavior. ([GitHub][1])
