@@ -21,7 +21,8 @@ This repository provides a way to **detect and track vehicles** using a **transf
 * `VideoResults/` — Output videos/results (folder name). ([GitHub][1])
 * `requirements.txt` — Python dependencies list. ([GitHub][1])
 
-A sample output video is linked as **`tailgating.avi`**. (VideoResults%2Ftailgating.avi)
+A sample output video is linked as **`[tailgating.avi](VideoResults%2Ftailgating.avi)
+`**.
 
 ---
 
