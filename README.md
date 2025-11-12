@@ -1,35 +1,87 @@
-## Vehicle Tailgating solution using Deep Sort and DETR
+Here’s a README in GitHub-friendly Markdown, based **only** on what’s in your repo.
 
-https://github.com/facebookresearch/detr
+---
 
-### We use DETR to detect vehicles and Deepsort to ReID the vehicle (One can use different detection model like YOLO, CNNs or transformer based models).
+# Vehicle Tailgating solution using Deep Sort and DETR
 
-### The results produced from the same can be viewed here
+This repository provides a way to **detect and track vehicles** using a **transformer-based object detector (DETR)** and a **tracking algorithm (Deep SORT)** to identify **tailgating** behavior. ([GitHub][1])
+
+> DETR reference: [https://github.com/facebookresearch/detr](https://github.com/facebookresearch/detr) ([GitHub][1])
+
+---
+
+## Repository Structure
+
+* `detr_deep_sort_vehicle.py` — Core logic for detecting and tracking vehicles; includes an option to **draw Region of Interest (ROI)**. ([GitHub][1])
+* `inference_tailgating.py` — **Inference entry point**; accepts a video path in the `event()` function and applies tailgating logic. ([GitHub][1])
+* `draw_roi.py`, `generate_detections.py`, `features_from_boxes.py` — Utilities used by the pipeline. ([GitHub][1])
+* `deep_sort/` — Deep SORT related code. ([GitHub][1])
+* `configs/`, `model_data/` — Configuration and model-related assets. ([GitHub][1])
+* `Video/`, `NewVideos/` — Sample/input videos (folder names). ([GitHub][1])
+* `VideoResults/` — Output videos/results (folder name). ([GitHub][1])
+* `requirements.txt` — Python dependencies list. ([GitHub][1])
+
+A sample output video is linked as **`tailgating.avi`**. (VideoResults%2Ftailgating.avi)
+
+---
+
+## How it Works (High Level)
+
+1. **DETR** detects vehicles frame-by-frame.
+2. **Deep SORT** assigns persistent IDs (ReID) and tracks vehicles.
+3. A **tailgating heuristic** evaluates how long a vehicle stays in a defined **ROI** and related conditions to decide violations. ([GitHub][1])
+
+---
+
+## Key Parameters
+
+Configured within the **`Tailgating`** class (in `inference_tailgating.py`) and can be **changed per camera** when calling `event()`:
+
+* `ROI_OVERLAP_THRESHOLD` — Overlap with ROI, **default `0.8`**
+* `stop_second_threshold` — Stoppage time inside ROI, **default `4` seconds**
+* `Similarity` — Similarity between vehicles (ReID), **default `0.7`**
+* `max_dist_covered` — Max distance covered by the same vehicle, **default `800`**
+* `min_dist` — Minimum distance a vehicle travels inside ROI, **default `144`** ([GitHub][1])
+
+---
+
+## Steps to Run
+
+1. Run **`inference_tailgating.py`**.
+2. The **first frame** of the video will pop up.
+3. **Select an ROI** by dragging the mouse from **top-left** to **bottom-right**.
+4. Press **`q`** to continue.
+5. Vehicles are detected and tracked with IDs.
+6. Tailgating is inferred based on **how long a vehicle remained in the ROI** or **was behind another vehicle when a gate was opened**.
+7. **Console output** shows the final result. ([GitHub][1])
+
+---
+
+## Files of Interest
+
+* **`inference_tailgating.py`** — main inference & tailgating logic entry. ([GitHub][1])
+* **`detr_deep_sort_vehicle.py`** — DETR + Deep SORT integration and ROI drawing support. ([GitHub][1])
+* **`README.md`** — original short guide in the repo. ([GitHub][1])
+  
+#### The results produced from the same can be viewed here
 [tailgating.avi](VideoResults%2Ftailgating.avi)
 
-### detr_deep_sort_vehicle.py - has the logic behind detecting and tracking vehicles. It also gives an option to draw Region of Interest
 
-### inference_tailgating.py is the inference file where it accepts the video path in the event() function.
+---
 
-### Paramerters needed for the understanding of the environment:
+## Author
 
-### Steps to run the algorithm:
-````
-1) Run inference_tailgating.py
-2) First frame of the video will pop up
-3) Select a region by dragging the mouse pointer from top-let to bottom-right
-4) Press 'q' to continue with the algorithm
-5) We detect the vehicles tracking their IDs
-6) The thought behind tailgating is to understand how long a certain vehicle was in the ROI or behind another vehicle when the gate was opened
-7) The console statements shows the final output
-````
+`ju7stritesh@gmail.com` ([GitHub][1])
 
-Some important parameters and their thresholds
-- ROI_OVERLAP_THRESHOLD - Overlap with ROI, default 0.8
-- stop_second_threshold = Stoppage time for vehicle in the Region of Interest, default 4 seconds
-- Similarity - Similarity between two vehicles, default 0.7
-- max_dist_covered - Max distnace covered by the same vehicle, default 800
-- min_dist - Minimum distance a vehicle travels inside ROI, default 144
-- All the parameters are part of initilization within Tailgating class in inference_tailgating.py, this can be changed per camera basis when calling the event() function
+---
 
-author: ju7stritesh@gmail.com
+## About
+
+> “This solution provides a way to track vehicles using transformer based Object detection and Tracking algorithm created by me for tailgating.” ([GitHub][1])
+
+---
+
+*This README mirrors the information provided in the repository without adding external details.*
+
+[1]: https://github.com/ju7stritesh/DETR_Vehicle_tailgating "GitHub - ju7stritesh/DETR_Vehicle_tailgating: This solution provides a way to track vehicles using transformer based Object detection and Tracking algorithm created by me for tailgating"
+
