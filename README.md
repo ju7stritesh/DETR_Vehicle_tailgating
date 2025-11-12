@@ -8,7 +8,7 @@ This repository provides a way to **detect and track vehicles** using a **transf
 
 > DETR reference: [https://github.com/facebookresearch/detr](https://github.com/facebookresearch/detr) ([GitHub][1])
 
-> Output: [https://github.com/ju7stritesh/DETR_Vehicle_tailgating/blob/main/VideoResults/] ([video][1])
+> Output: [https://github.com/ju7stritesh/DETR_Vehicle_tailgating/VideoResults/] ([video][1])
 ---
 
 ## Repository Structure
