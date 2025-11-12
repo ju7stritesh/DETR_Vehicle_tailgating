@@ -80,7 +80,5 @@ Configured within the **`Tailgating`** class (in `inference_tailgating.py`) and 
 
 ---
 
-*This README mirrors the information provided in the repository without adding external details.*
-
 [1]: https://github.com/ju7stritesh/DETR_Vehicle_tailgating "GitHub - ju7stritesh/DETR_Vehicle_tailgating: This solution provides a way to track vehicles using transformer based Object detection and Tracking algorithm created by me for tailgating"
 
